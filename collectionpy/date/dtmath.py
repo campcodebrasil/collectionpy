@@ -8,8 +8,6 @@ def addYear(dt, relative_year):
     return dt.replace(year=year)
 
 def addMonth(dt, relative_month):
-        """
-        """
         month = dt.month + relative_month
         year = dt.year
             

@@ -1,5 +1,5 @@
 from datetime import datetime
-from relativedate.dtmath import addMonth, addDay
+from collectionpy.date.dtmath import addMonth, addDay
 
 def lastDay(dt):
     dt = addMonth(dt, 1) # Calcula para o Próximo Mês
