@@ -1,23 +1,24 @@
 
-from collectionpy.date import dtget
-from datetime import datetime
+from collectionpy.date.dtmath import add, dateDiff
+from datetime import datetime 
 
-agora = datetime.now()
-print(agora) # RESULTADO: 2024-01-24
+atual = datetime(2024, 1, 5)
 
-# Recupera o Último Dia Número
-ultimo_dia = dtget.lastDay(agora)
-print(ultimo_dia) # RESULTADO: 31
+proximo_dia = add(atual, day=1)
+dia_anterior = add(atual, day=-1)
 
-# Recupera o Último Dia em Data
-ultimo_dia = dtget.lastDate(agora)
-print(ultimo_dia) # RESULTADO: 2024-01-31
+proximo_mes = add(atual, month=1)
+mes_anterior = add(atual, month=-1)
 
-# Adiciona mês (Positivo e Negativo)
-proximo_mes = dtget.addMonth(agora, 1)
-mes_anterior = dtget.addMonth(agora, -1)
-print(proximo_mes) # RESULTADO: 2024-02-24
-print(mes_anterior) # RESULTADO: 2023-12-24
+proximo_ano = add(atual, year=1)
+ano_anterior = add(atual, year=1)
 
 
+print(atual)
+print(proximo_dia)
+print(dia_anterior)
+print(proximo_mes)
+print(mes_anterior)
+print(proximo_ano)
+print(ano_anterior)
 
