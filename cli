@@ -10,3 +10,4 @@ username: __token__
 python setup.py sdist bdist_wheel
 twine upload dist/*
 __token__
+pypi-AgEIcHlwaS5vcmcCJDhjOWZjYzkyLTk5YzItNDVhYS1iZGUzLTljNGU0OTEwYmU5ZgACKlszLCJkYjhmZGViMi05YWJlLTQ4ZTUtOGVhNC1jODljZWM0MGI3MmUiXQAABiBTJIpU0JqYPBKL7Q2ST2GBFqtP1YYzP6PGE2ZillYFUw
