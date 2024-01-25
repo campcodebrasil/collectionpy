@@ -1,0 +1,12 @@
+# Rebuild
+python setup.py sdist bdist_wheel
+
+# Upload
+twine upload dist/*
+
+
+username: __token__
+
+python setup.py sdist bdist_wheel
+twine upload dist/*
+__token__

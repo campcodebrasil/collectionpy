@@ -1,0 +1,8 @@
+*.pyc
+build/
+dist/
+
+darkpy.egg-info/
+.version/
+
+.env
