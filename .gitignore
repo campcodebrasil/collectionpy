@@ -1,8 +1,6 @@
 *.pyc
 build/
 dist/
-
-darkpy.egg-info/
-.version/
+collectionpy.egg-info/
 
 .env
