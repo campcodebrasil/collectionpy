@@ -2,7 +2,7 @@ CND_SRC = "https://cdn.jsdelivr.net/npm/apexcharts"
 
 class Chart:
     def __init__(self, x:[], y:[], y_label=[], plot_type='bar',
-                chartId='darkpyChart',
+                chartId='CollectionPyChart',
                 foreColor='343E59',
                 background= 'fff',    
                 fontFamily= "Crimson Text",
@@ -15,7 +15,7 @@ class Chart:
                 borderRadius = 5,
                 borderColor = '6e7eaa',
                 borderRight = 25,
-                borserLeft = 15,
+                borderLeft = 15,
                 palette = 2
         ):
         """
@@ -49,7 +49,7 @@ class Chart:
         self.borderRadius = borderRadius
         self.borderColor = borderColor.replace('#', '')
         self.borderRight = borderRight
-        self.borserLeft = borserLeft
+        self.borderLeft = borderLeft
         self.palette = f"palette{palette}"
         
 
@@ -137,7 +137,7 @@ class Chart:
                 "borderColor": f"#{self.borderColor}",
                 "padding": {
                     "right": self.borderRight,
-                    "left": self.borserLeft
+                    "left": self.borderLeft
                 }
             }
 
