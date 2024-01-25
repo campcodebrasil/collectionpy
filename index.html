@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Nome do Seu Framework - Documentação</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.1.0/uicons-solid-straight/css/uicons-solid-straight.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.1.0/uicons-regular-straight/css/uicons-regular-straight.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.1.0/uicons-thin-straight/css/uicons-thin-straight.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.1.0/uicons-bold-straight/css/uicons-bold-straight.css'>
+
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"><b>CollectionPy</b></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="https://github.com/campcodebrasil/collectionpy" target="_blank">GitHub</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="https://pypi.org/project/collectionpy/" target="_blank">PyPi</a>
+              </li>
+            </ul>
+            <section class="d-flex">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                      <a class="nav-link" href="#section1">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#section2">Chart</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#section3">Date</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#section4">Math</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#section5">Text</a>
+                    </li>
+                  </ul>
+            </section>
+          </div>
+        </div>
+      </nav>
+      </nav>
+
+
+
+<div class="container-fluid p-4 mt-4 text-decoration-none">    
+    <section id="section1" class="row justify-content-between">
+        <div class="row col-12">
+            <h2>Introdução</h2>
+            <p class="mt-2">Bem-vindo ao Framework CollectionPy, uma ferramenta poderosa projetada para simplificar e aprimorar suas tarefas relacionadas à manipulação de datas, formatação de números em texto e criação rápida de gráficos. Este framework foi desenvolvido com o objetivo de oferecer uma solução eficiente e intuitiva para lidar com operações comuns no desenvolvimento de aplicativos, proporcionando uma experiência de programação mais eficaz e produtiva.</p>
+            <h5 class="mt-4">Instalação</h5>
+            <p class="mt-2 border border-4 p-2 text-primary">pip install collectionpy</p>
+
+            <hr class="mt-4">
+            <div class="col-md-3 p-4">
+                <h1><i class="fi fi-ss-chart-pie-alt"></i> Chart</h1>
+                
+            </div>
+            
+            <div class="col-md-3 p-4">
+                <h1><i class="fi fi-rs-calendar"></i> Date</h1>
+                
+            </div>
+            
+            <div class="col-md-3 p-4">
+                <h1><i class="fi fi-rs-calculator-simple"></i> Math</h1>
+                
+            </div>
+            
+            <div class="col-md-3 p-4">
+                <h1><i class="fi fi-ts-text-box-edit"></i> Text</h1>
+                
+            </div>
+            <hr>
+        </div>
+    </section>
+    
+    <section id="section2" class="row mt-5 p-4">
+        <h2 id="section2.1" class="mb-4"><i class="fi fi-ss-chart-pie-alt"></i> Chart (<span class="small">collectionpy.chart</span>)</h2>
+        <p>O módulo Chart, tem como objetivo facilitar a criação de gráficos web, podendo ser utilizada em qualquer framework web python (django, flask, ...)</p>
+        <h5>Exemplo de uso</h5> <hr>
+        <div class="row">
+            <div class="col-md-4">
+                <i>Python (Django)</i>
+                <hr>
+                <img src="static/chart/001_python.png"  class="img img-fluid">
+            </div>
+            <div class="col-md-4">
+                <i>HTML</i>
+                <hr>
+                <img src="static/chart/001_html.png"  class="img img-fluid">
+            </div>
+            <div class="col-md-4">
+                <i>Resultado</i>
+                <hr>
+
+                <div class="container text-center" style="max-width: 1500px;">  
+                    <div id="chart"></div>
+                </div>
+
+                <script>
+                    var options = {'chart': {'id': 'darkpyChart', 'type': 'bar', 'foreColor': '#343E59', 'background': '#fff', 'fontFamily': 'Crimson Text', 'dropShadow': {'enabled': 'true', 'top': -7, 'left': 7, 'blur': 7}}, 'plotOptions': {'bar': {'borderRadius': 5, 'borderRadiusApplication': 'end', 'borderRadiusWhenStacked': 'last'}, 'treemap': {'borderRadius': 4, 'dataLabels': {'format': 'scale'}}, 'radialBar': {'hollow': {'background': '#fff'}, 'dataLabels': {'name': {}, 'value': {}, 'total': {}}, 'barLabels': {'margin': 5, 'fontWeight': 600, 'fontSize': '16px'}}, 'pie': {'donut': {'labels': {'name': {}, 'value': {}, 'total': {}}}}}, 'grid': {'borderColor': '#6e7eaa', 'padding': {'right': 25, 'left': 15}}, 'legend': {'position': 'top', 'fontSize': 12, 'offsetX': 0, 'offsetY': 13, 'markers': {'shape': 'square', 'size': 8}, 'itemMargin': {'vertical': 0}}, 'series': [{'name': 'Orçado', 'data': [{'x': 'Piracicaba', 'y': 8}, {'x': 'Americana', 'y': 2}, {'x': 'São Paulo', 'y': 15}]}, {'name': 'Realizado', 'data': [{'x': 'Piracicaba', 'y': 12}, {'x': 'Americana', 'y': 5}, {'x': 'São Paulo', 'y': 2}]}], 'theme': {'palette': 'palette2'}}
+                    var chart = new ApexCharts(document.querySelector("#chart"), options);
+                    chart.render();
+                </script>
+
+            </div>
+        </div>
+
+        
+    </section>
+    <!-- Adicione mais seções conforme necessário -->
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+
+</body>
+</html>
