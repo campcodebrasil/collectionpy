@@ -3,4 +3,7 @@ build/
 dist/
 collectionpy.egg-info/
 
+__pycache__
+
 .env
+.update_pypi

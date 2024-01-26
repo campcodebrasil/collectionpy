@@ -61,7 +61,7 @@
 <div class="container-fluid p-4 mt-4 text-decoration-none">    
     <section id="section1" class="row justify-content-between">
         <div class="row col-12">
-            <h2>Versão 1.0.1</h2>
+            <h2>Versão 1.0.2</h2>
             <p class="mt-2">O Framework CollectionPy é uma ferramenta poderosa projetada para simplificar e aprimorar suas tarefas relacionadas à manipulação de datas, formatação de números em texto e criação rápida de gráficos. Este framework foi desenvolvido com o objetivo de oferecer uma solução eficiente e intuitiva para lidar com operações comuns no desenvolvimento de aplicativos, proporcionando uma experiência de programação mais eficaz e produtiva.</p>
             <h5 class="mt-4">Instalação</h5>
             <p class="mt-2 border border-4 p-2 text-primary">pip install collectionpy</p>
@@ -92,11 +92,11 @@
     <span id="section2"></span>
     <section class="row mt-5 p-4">
         <h2 id="section2.1" class="mb-4 text-primary"><i class="fi fi-ss-chart-pie-alt"></i> Chart (<span class="small">collectionpy.chart</span>)</h2>        
-        <p>O módulo Chart, tem como objetivo facilitar a criação de gráficos web, podendo ser utilizada em qualquer framework web python (django, flask, ...)</p>
+        <p>A coleção Chart, tem como objetivo facilitar a criação de gráficos web, podendo ser utilizada em qualquer framework web python (django, flask, ...)</p>
         
         <section id="apexcharts" class="border p-4">
           <h4 class="text-danger">ApexCharts <span class="small text-dark">(collectionpy.chart.apexcharts)</span></h4>
-          <p><b>Chart</b>(x:[], y:[], y_label=[], plot_type='bar', chartId='darkpyChart', foreColor='343E59', background= 'fff', fontFamily= "Crimson Text", fontSize = 12, width = None, height = None, dropShadowTop = -7, dropShadowLeft = 7, dropShadowBlur = -10, borderRadius = 5, borderColor = '6e7eaa', borderRight = 25, borserLeft = 15, palette = 2 )</p>
+          <p><b>Chart</b>(x:[], y:[], y_label=[], plot_type='bar', chartId='CollectionPyChart', foreColor='343E59', background= 'fff', fontFamily= "Crimson Text", fontSize = 12, width = None, height = None, dropShadowTop = -7, dropShadowLeft = 7, dropShadowBlur = -10, borderRadius = 5, borderColor = '6e7eaa', borderRight = 25, borserLeft = 15, palette = 2 )</p>
           <p class="mt-3 mb-4">
             Esse módulo foi criado baseado no framework JS ApexCharts, sendo o objetivo principal desse módulo é facilitar a criação de gráficos WEB, caso deseje saber mais sobre o framework ApexCharts <a href="https://apexcharts.com/docs/installation/" target="_blank">clique aqui</a> para acessar a documentação oficial
           </p>
@@ -183,7 +183,7 @@
     <span id="section3"></span>
     <section class="row mt-5 p-4">
       <h2 id="section2.1" class="mb-4 text-danger"><i class="fi fi-rs-calendar"></i> Date (<span class="small">collectionpy.date</span>)</h2>        
-      <p>O módulo Date, tem como objetivo facilitar a manipulação de datas, sejam para realizar cálculos com datas como recuperar informações de datas relativas</p>
+      <p>A coleção Date, tem como objetivo facilitar a manipulação de datas, sejam para realizar cálculos com datas como recuperar informações de datas relativas</p>
 
       <div class="row">
         <div class="col-xl-6 p-3">
@@ -211,12 +211,11 @@
                   </p>                  
                 </div>
                 <div class="mt-1 bg-dark text-white p-4">
-                  <p>Resposta</p> 
-                  <hr>
+                  <br>
                   <p>2024-01-15 00:00:00</p>
                 </div>
                 
-                <table class="table border">
+                <table class="table border mt-4">
                   <tr><td colspan="3" class="table-warning">Essa função irá percorrer todos os dias e retornar o dia útil dentro do mês, vamos ver o detalhe abaixo:</td></tr>
                   <tr>
                     <td>2024-01-01</td><td>Desconsiderado na lista disregard</td><td></td>
@@ -277,18 +276,18 @@
               <b>add</b><i>(dt, year:int, month:int, day:int, hour:int, minute:int, second:int)</i> <br> Retorna uma data adicionando o tempo de acordo com o informado nos parâmetros
               
               <h5 class="mt-3 p-2 bg-success text-white rounded">Exemplo:</h5>
-                <div class="border p-4 mt-2">
+                <div class="border p-2 mt-2">
                   <p>
                     from collectionpy.date.dtmath import add  <br>
                     from datetime import datetime  <br>  <br>
 
-                    atual = datetime(2024, 1, 5)  <br> <br>
+                    atual = datetime(2024, 1, 5)  <br> 
 
                     proximo_dia = add(atual, day=1) <br>
-                    dia_anterior = add(atual, day=-1) <br> <br>
+                    dia_anterior = add(atual, day=-1) <br> 
 
                     proximo_mes = add(atual, month=1) <br>
-                    mes_anterior = add(atual, month=-1) <br> <br>
+                    mes_anterior = add(atual, month=-1) <br> 
 
                     proximo_ano = add(atual, year=1) <br>
                     ano_anterior = add(atual, year=1) <br> <br>
@@ -303,9 +302,7 @@
                     print(ano_anterior) <br>
                   </p>                  
                 </div>
-                <div class="mt-1 bg-dark text-white p-4">
-                  <p>Resposta</p> 
-                  <hr>
+                <div class="mt-1 bg-dark text-white p-2">
                   <p>
                     2024-01-05 00:00:00 <br>
                     2024-01-06 00:00:00 <br>
@@ -321,15 +318,207 @@
 
             <li class="mt-3">
               <b>dateDiff</b><i>(first_dt:datetime, second_dt:datetime, on='month')</i> <br> Retorna a diferença entre duas datas de acordo com o parâmetro <b>on</b>
+              <ul>
+                <li><b>first_dt</b> (datetime) => Data inicial</li>
+                <li><b>second_dt</b> (datetime) => Data Final</li>
+                <li><b>on</b> (string) ['day', 'month', 'year'] => Tipo de retorno</li>
+              </ul>
+              <h5 class="mt-3 p-2 bg-success text-white rounded">Exemplo:</h5>
+                <div class="border p-2 mt-2">
+                  <p>
+                    from collectionpy.date.dtmath import dateDiff  <br>
+                    from datetime import datetime  <br>  <br>
+
+                    data_inicial = datetime(2022, 1, 5)  <br>
+                    data_final = datetime(2024, 1, 5)  <br> 
+
+                    dif_dias = dateDiff(data_inicial, data_final, 'day')  <br>
+                    dif_mes = dateDiff(data_inicial, data_final, 'month')  <br>
+                    dif_ano = dateDiff(data_inicial, data_final, 'year')  <br>  <br>
+
+                    print(dif_dias)  <br>
+                    print(dif_mes)  <br>
+                    print(dif_ano)  <br>
+                  </p>                  
+                </div>
+                <div class="mt-1 bg-dark text-white p-2">
+                  <p>
+                    730  <br>
+                    24  <br>
+                    2
+                  </p>
+                </div>
             </li>
           </ul>
+        </div>
+
+        <div class="col-12 p-3">
+          <h4 class="bg-info text-white rounded p-2">RelativeDate <span class="small">(collectionpy.date)</span></h4>
+          <div class="p-2">
+            <p>A classe RelativeDate possui a maioria das funcionalidades do módulo dtget e dtmath, dentro de um objeto RelativeDate, temos um atributo que guarda o datetime</p>
+            <p><b>RelativeDate</b>(dt:datetime)
+              <ul><li><b>dt</b>(default=None) => Data atribuida no atribuito dt, caso não seja passado uma data, o objeto irá instanciar com a data atual</ul></li>
+            </p>
+            
+            <div class="row">
+              
+              <div class="col-xl-6 p-3">
+                <h4 class="bg-primary text-white rounded p-2">Propriedades</h4>
+                <ul>
+                  <li><b>.datetime</b> => Recupera o objeto Datetime atual</li>
+                  <li><b>.initial_date</b> => Recupera o objeto Datetime inicial</li>
+                  <li><b>.second()</b> => Recupera o segundo do objeto datetime atual</li>
+                  <li><b>.minute()</b> => Recupera o minuto do objeto datetime atual</li>
+                  <li><b>.hour()</b> => Recupera a hora do objeto datetime atual</li>
+                  <li><b>.day()</b> => Recupera o dia do objeto datetime atual</li>
+                  <li><b>.month()</b> => Recupera o mês do objeto datetime atual</li>
+                  <li><b>.year()</b> => Recupera o ano do objeto datetime atual</li>
+                </ul>
+                <h5 class="mt-3 p-2 bg-success text-white rounded">Exemplo:</h5>
+                <div class="border p-2 mt-2">
+                  <p>
+                    from collectionpy.date import RelativeDate  <br>
+                    from datetime import datetime  <br>  <br>
+
+                    data = datetime(2024, 1, 5, 7, 55, 33)  <br>
+                    rd = RelativeDate()  <br> <br>
+
+                    print(rd.datetime) <br>
+                    print(rd.second()) <br>
+                    print(rd.minute()) <br>
+                    print(rd.hour()) <br>
+                    print(rd.day()) <br>
+                    print(rd.month()) <br>
+                    print(rd.year())
+                  </p>                  
+                </div>
+                <div class="mt-1 bg-dark text-white p-2">
+                  <p>
+                    2024-01-26 10:25:30.340523 <br>
+                    30 <br>
+                    25 <br>
+                    10 <br>
+                    26 <br>
+                    1 <br>
+                    2024
+                  </p>
+                </div>
+              </div>
+
+              <div class="col-xl-6 p-3">
+                <h4 class="bg-danger text-white rounded p-2">Funcionalidades</h4>
+                <ul>
+                  <li><b>.add</b>(year=0, month=0, day=0, hour=0, minute=0, second=0) => Adiciona tempo no objeto Datetime atual</li>                  
+                  <li><b>.dateDiff</b>(dt, on='month') => Retorna a diferença de tempo do datetime informada no parâmetro com o objeto datetime atual </li>
+                  <li><b>.lastDay()</b> => Retorna o último dia do mês do objeto datetime atual (em formato de número)</li>
+                  <li><b>.lastDate()</b> => Retorna o último dia do mês do objeto datetime atual (em formado datetime</li>
+                  <li><b>.getUtilDay</b>(util_day, disregard=[]) => Retorna a data de um dia útil desejado (Considera apenas dias de semana como dia útil)</li>
+                </ul>
+                <h5 class="mt-3 p-2 bg-success text-white rounded">Exemplo:</h5>
+                <div class="border p-2 mt-2">
+                  <p>
+                    from collectionpy.date import RelativeDate  <br>
+                    from datetime import datetime  <br>  <br>  <br>
+
+                    data = datetime(2024, 1, 5, 7, 55, 33)  <br>
+                    segunda_data = datetime(2025, 9, 2, 7, 55, 33)  <br>  <br>
+
+                    rd = RelativeDate()  <br>
+                    print(rd.datetime)  <br>  <br>
+                    
+                    rd.add(month=-1)  <br>                    
+                    print(rd.datetime)  <br>  <br>
+
+                    print(rd.dateDiff(segunda_data, 'month'))  <br>
+                    print(rd.lastDay())  <br>
+                    print(rd.lastDate())  <br>
+                    print(rd.getUtilDay(7, [1, 2]))
+                  </p>                  
+                </div>
+                <div class="mt-1 bg-dark text-white p-2">
+                  <p>
+                    2024-01-26 10:46:00.313805  <br>
+                    2023-12-26 10:46:00.313805  <br>
+                    21  <br>
+                    31  <br>
+                    2023-12-31 00:00:00  <br>
+                    2023-12-12 00:00:00
+                  </p>
+                </div>
+              </div>
+
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
 
-    <span id="section4"></span>
-    <span id="section5"></span>
+    <span id="section4"></span>    
+    <section class="row mt-5 p-4">
+      <h2 id="section4.1" class="mb-4 text-primary"><i class="fi fi-rs-calculator-simple"></i> Math (<span class="small">collectionpy.math</span>)</h2>        
+      <p>A coleção Math, tem como objetivo facilitar alguns cálculos Matemáticos</p>
+      
+      <section id="normalized_mean" class="border p-4">
+        <h4 class="text-danger">normalized_mean <span class="small text-dark">(collectionpy.math.normalized_mean)</span></h4>
+        <p><b>normalized_mean</b>(max, min, mean, median, safety_factor=True)</p>
+        <p class="mt-3 mb-4">
+          Esse Cálculo serve para Normalizar a Média de resultados, seguindo os seguintes passos:
+          <ol>
+            <li>Realiza a ponderação da média para cima</li>
+            <li>Realiza a ponderação da média para baixo</li>
+            <li>Realiza a média da ponderação</li>
+            <li>Realiza a média do cálculo anterior com a mediana</li>
+            <li>
+              Realiza a Média do resultado anterior com a média da Média + a Mediana
+              <ul><li>Fator de Segurança = Verdadeiro (Default = True)</li></ul>
+            </li>          
+          </ol>
+        </p>
+      </section>      
+    </section>
+    
+    <span id="section5"></span>    
+    <section class="row mt-5 p-4">
+      <h2 id="section5.1" class="mb-4 text-success"><i class="fi fi-ts-text-box-edit"></i> Text (<span class="small">collectionpy.text</span>)</h2>        
+      <p>A coleção Text, tem como objetivo facilitar a exibição de strings e conversão de variável para string</p>
+      
+      <section class="row">
+        <div class="col-xl-6 p-2">
+          <div class="border p-2"  style="height: 280px;">
+            <h4 class="text-danger">number_to_money <span class="small text-dark">(collectionpy.text.number_to_money)</span></h4>
+            <p><b>number_to_money</b>(number, simbol=False, txt_simbol='brl')</p>
+            <p class="mt-3 mb-4">
+              Converte um número para Texto no formato de moeda
+              <ul>
+                <li><b>number</b>(Obrigatório) => Número que será convertido em String</li>
+                <li><b>simbol</b>(default=False) => Será exibido o simbolo da Moeda?</li>                
+                <li>
+                  <b>txt_simbol</b>(default='brl') => ['brl', 'us']
+                  <ul>
+                    <li>'blr' => R$</li>
+                    <li>'us' => $</li>
+                  </ul>
+                </li>          
+              </ul>
+            </p>
+          </div>          
+        </div>
+        <div class="col-xl-6 p-2">
+          <div class="border p-2"  style="height: 280px;">
+            <h4 class="text-danger">number_to_percent <span class="small text-dark">(collectionpy.text.number_to_percent)</span></h4>
+            <p><b>number_to_percent</b>(number, simbol=False)</p>
+            <p class="mt-3 mb-4">
+              Converte um número para Texto no formato de porcentagem
+              <ul>
+                <li><b>number</b>(Obrigatório) => Número que será convertido em String</li>
+                <li><b>simbol</b>(default=False) => Será exibido o simbolo da procentagem?</li>                
+              </ul>
+            </p>
+          </div>         
+        </div>
+      </section>      
+    </section>
 
 
 

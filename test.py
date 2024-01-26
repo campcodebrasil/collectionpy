@@ -1,24 +1,18 @@
 
-from collectionpy.date.dtmath import add, dateDiff
+from collectionpy.date import RelativeDate
 from datetime import datetime 
 
-atual = datetime(2024, 1, 5)
+data = datetime(2024, 1, 5, 7, 55, 33)
+segunda_data = datetime(2025, 9, 2, 7, 55, 33)
 
-proximo_dia = add(atual, day=1)
-dia_anterior = add(atual, day=-1)
+rd = RelativeDate()
+print(rd.datetime)
 
-proximo_mes = add(atual, month=1)
-mes_anterior = add(atual, month=-1)
+rd.add(month=-1)
 
-proximo_ano = add(atual, year=1)
-ano_anterior = add(atual, year=1)
-
-
-print(atual)
-print(proximo_dia)
-print(dia_anterior)
-print(proximo_mes)
-print(mes_anterior)
-print(proximo_ano)
-print(ano_anterior)
+print(rd.datetime)
+print(rd.dateDiff(segunda_data, 'month'))
+print(rd.lastDay())
+print(rd.lastDate())
+print(rd.getUtilDay(7, [1, 2]))
 

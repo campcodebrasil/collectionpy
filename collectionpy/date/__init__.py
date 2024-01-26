@@ -12,6 +12,8 @@ class RelativeDate:
             self.datetime = datetime.now()
         else:
             self.datetime = dt
+
+        self.initial_date = dt
     
     def __str__(self):
         return self.datetime.strftime('%Y-%m-%d')
@@ -48,8 +50,8 @@ class RelativeDate:
     def add(self, year=0, month=0, day=0, hour=0, minute=0, second=0):        
         self.datetime = dtmath.add(dt=self.datetime,year=year, month=month, day=day, hour=hour, minute=minute, second=second)
 
-    def dateDiff(self, dt):
-        return dtmath.dateDiff(self.datetime, dt)
+    def dateDiff(self, dt, on='month'):
+        return dtmath.dateDiff(self.datetime, dt, on)
     
     ### DATE GET ###
     def lastDay(self):
