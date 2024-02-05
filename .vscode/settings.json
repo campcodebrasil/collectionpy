@@ -1,0 +1,11 @@
+{    
+    "files.exclude": {
+      "__pycache__": true, 
+      ".venv": true,
+      "requirements.txt": true,
+      "build": true,
+      ".gitignore": true,
+      "collectionpy.egg-info": true,
+    }
+  }
+  

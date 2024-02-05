@@ -1,18 +1,16 @@
 
-from collectionpy.date import RelativeDate
-from datetime import datetime 
+from collectionpy.chart.googlecharts import GTable
 
-data = datetime(2024, 1, 5, 7, 55, 33)
-segunda_data = datetime(2025, 9, 2, 7, 55, 33)
+cols = ['Periodo', 'Orçado', 'Realizado']
+rows = [
+    ['2023-01', 25000, 20000], 
+    ['2023-02', 24500, 25000], 
+    ['2023-03', 25300, 26000], 
+    ['2023-04', 25700, 27000], 
+]
 
-rd = RelativeDate()
-print(rd.datetime)
+gchart = GTable(id='Table', rows=rows, cols=cols)
 
-rd.add(month=-1)
-
-print(rd.datetime)
-print(rd.dateDiff(segunda_data, 'month'))
-print(rd.lastDay())
-print(rd.lastDate())
-print(rd.getUtilDay(7, [1, 2]))
+print(gchart.render())
+print(gchart.js_loader)
 

@@ -7,7 +7,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setup(
     name='collectionpy',
-    version='1.0.2',
+    version='1.1.0',
     description='"collectionpy" is more than just a library; it is a comprehensive tool that provides efficient solutions for various areas, ranging from date manipulation and text formatting to the creation of impressive graphics.',
     long_description=long_description,
     long_description_content_type="text/markdown",

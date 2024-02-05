@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    </head>
+    <body>
+        <script type="text/javascript">
+            google.charts.load('current', {'packages':['table']});
+            google.charts.setOnLoadCallback(Table);
+        
+            function Table() {
+                var data = google.visualization.arrayToDataTable([['Periodo', 'Orçado', 'Realizado'], ['2023-01', 25000, 20000], ['2023-02', 24500, 25000], ['2023-03', 25300, 26000], ['2023-04', 25700, 27000]]);
+                var chart  = new google.visualization.Table(document.getElementById('Table'));
+                chart.draw(data, {'showRowNumber': 'true', 'width': '100%', 'height': '100%'});
+            }
+        </script>
+        <div id="Table" class=""></div>
+    </body>
+</html>
