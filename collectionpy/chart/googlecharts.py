@@ -79,7 +79,7 @@ class GComboChart(GChart):
         self.options['seriesType'] = 'bars'
         max_cols = len(self.cols)
         for l in self.lines:
-            indice = l+1
+            indice = l
             if indice < max_cols: series[indice] = {'type': 'line', 'colors': 'black'}
         self.options['series'] = series
 
