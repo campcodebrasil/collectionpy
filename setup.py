@@ -12,5 +12,5 @@ setup(
     long_description=long_description,
     long_description_content_type="text/markdown",
     packages=['collectionpy', 'collectionpy.chart', 'collectionpy.date', 'collectionpy.math', 'collectionpy.text'],
-    install_requires=[],
+    install_requires=['numpy'],
 )

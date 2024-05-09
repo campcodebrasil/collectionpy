@@ -1,16 +1,15 @@
 
-from collectionpy.chart.googlecharts import GTable
+from collectionpy.math.statistic import SimpleLinearRegression
 
-cols = ['Periodo', 'Orçado', 'Realizado']
-rows = [
-    ['2023-01', 25000, 20000], 
-    ['2023-02', 24500, 25000], 
-    ['2023-03', 25300, 26000], 
-    ['2023-04', 25700, 27000], 
-]
+slr = SimpleLinearRegression(
+    x = [1, 2, 3, 4, 5],
+    y = [3, 6, 10, 15, 20]
+)
 
-gchart = GTable(id='Table', rows=rows, cols=cols)
+print(slr.expression())
 
-print(gchart.render())
-print(gchart.js_loader)
+x = 6
+y = slr.calcular(x)
+
+print('x=', x, '=', y)
 
